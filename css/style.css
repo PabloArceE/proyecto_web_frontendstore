@@ -261,7 +261,7 @@ h3{
 
 .bloque__icono{
     background-color: var(--gris);
-    width: 70%;
+    max-width: 40%;
     border-radius: 1rem;
 
 }
