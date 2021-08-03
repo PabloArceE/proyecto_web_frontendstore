@@ -5,6 +5,7 @@
     --secundarioOscuro: rgb(233,287,2);
     --blanco: #fff;
     --negro: #000;
+    --gris: #9b9a9a;
 
     --fuentePrincipal: 'Oswald', sans-serif;
 }
@@ -27,9 +28,13 @@ body{
 }
 
 p{
-    font-size: 1.8rem;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--blanco);
+}
+
+p{
+    color: var(--primarioOscuro);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.8rem;
 }
 
 a{
@@ -61,7 +66,7 @@ h2{
 }
 
 h3{
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 
 @media (min-width: 768px) {
@@ -78,10 +83,6 @@ h3{
     }
 }
 
-p{
-    color: var(--primarioOscuro);
-    font-family: var(--fuentePrincipal);
-}
 
 /* Header */
 
@@ -92,6 +93,7 @@ p{
 
 .header__logo{
     margin: 3rem 0;
+    width: 80%;
 }
 
 /* Navegacion */
@@ -101,15 +103,16 @@ p{
     padding: 1rem 0;    
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     text-transform: uppercase;
 }
 
 .navegacion__enlace{
     font-family: var(--fuentePrincipal);
     color: var(--blanco);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 0;
+    margin-left: 2rem;
 }
 
 .navegacion__enlace--activo,
@@ -120,13 +123,14 @@ p{
 .footer{
     background-color: var(--primarioOscuro);
     padding: 1rem 0;
-    margin-top: 2rem;    
+    margin-top: 2rem; 
 }
 
 .footer__texto{
     font-family: var(--fuentePrincipal);
     text-align: center;
     font-size: 1.5rem;
+    color: var(--primario);   
 }
 @media (min-width: 768px) {
     .footer__texto{
@@ -209,13 +213,65 @@ p{
 /* Nosotros */
 
 .nosotros{
-    /* realizar cambios en esta etiqueta*/
+    display: grid;
+       grid-template-rows: repeat(2, auto);     
+}
+@media (min-width: 768px){
+    .nosotros{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);           
+    }    
 }
 
 .nosotros__contenido{
-    
+    margin: 0 2rem;
 }
 
 .nosotros__imagen{
+    grid-row: 1 / 2;
+}
+@media (min-width: 768px){
+    .nosotros__imagen{
+        grid-column: 2 / 3;
+    }
+}
 
+/* Bloques */
+
+.bloques{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+@media (min-width: 768px){
+    .bloques{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+.bloque{
+    text-align: center;
+}
+
+.bloque__titulo{
+   margin: 0;
+}
+
+.bloque__icono{
+    background-color: var(--gris);
+    width: 70%;
+    border-radius: 1rem;
+
+}
+
+@media (max-width: 480px){
+    .bloque__descripcion{
+        font-size: 1.4rem;
+    }
+}
+
+.contenedor__comprar{
+    margin: 0 1rem;
 }
