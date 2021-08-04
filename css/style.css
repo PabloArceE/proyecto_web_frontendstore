@@ -1,6 +1,7 @@
 :root{
     --primario: #97ccf0;
     --primarioOscuro: #256599;
+    --primarioSombra: #0e416b;
     --secundario: #25247c;
     --secundarioOscuro: rgb(233,287,2);
     --blanco: #fff;
@@ -41,9 +42,9 @@ a{
     text-decoration: none;
 }
 
-img{
+/* img{
     width: 100%;
-}
+} */
 
 .contenedor{
     max-width: 120rem;
@@ -115,9 +116,13 @@ h3{
     margin-left: 2rem;
 }
 
-.navegacion__enlace--activo,
+.navegacion__enlace--activo{
+    color: var(--primario);
+}
+
 .navegacion__enlace:hover{
-    color: var(--secundario);
+    color: var(--primario);
+    transition: 1s;
 }
 
 .footer{
@@ -230,6 +235,7 @@ h3{
 
 .nosotros__imagen{
     grid-row: 1 / 2;
+    width: 100%;
 }
 @media (min-width: 768px){
     .nosotros__imagen{
@@ -275,4 +281,79 @@ h3{
 
 .contenedor__comprar{
     margin: 0 1rem;
+}
+
+/* PRODUCTO */
+
+.contenedor__react{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+}
+
+.react__imagen{
+    max-width: 60%;
+}
+@media (min-width: 768px) {
+    .contenedor__react{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: none;
+        margin: 4rem;
+    }
+
+    .react__imagen{
+        width: 80%;
+    }
+
+    .react__texto{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        margin: 0;
+        align-items: center;
+    }
+
+    
+}
+
+.react__texto{
+    text-align: center;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem;
+
+}
+
+.formulario__action{
+    border: .5rem solid var(--primarioOscuro);
+    background-color: transparent;
+    font-size: 2rem;
+    height: 4rem;
+    font-family: var(--fuentePrincipal);
+    text-align: center;
+    justify-content: center;
+   
+}
+
+.formulario__submit{
+    padding: 2rem;
+    font-family: var(--fuentePrincipal);
+    background-color: var(--primarioOscuro);
+    font-size: 2rem;
+    color: var(--blanco);
+    border: none;
+    text-transform: uppercase;
+    grid-column: 1 / 3;
+}
+
+.formulario__submit:hover{
+    cursor: pointer;
+    background-color: var(--primarioSombra);
+    font-size: 2.1rem;
+    transition: .8s ease;
+
 }
