@@ -300,6 +300,10 @@ h3{
     text-align: center;
 }
 
+.react__parrafo{
+    margin: 0 2rem;
+}
+
 .formulario{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -354,6 +358,10 @@ h3{
         align-items: center;
     }
 
+    .react__parrafo{
+        margin: 0;
+    }
+
 }
 @media (min-width: 480px) {
     .formulario__action{
@@ -364,6 +372,5 @@ h3{
         .formulario__action{
             font-size: 1rem;
             height: 4rem;
-        }   
-    
+        }    
 }
